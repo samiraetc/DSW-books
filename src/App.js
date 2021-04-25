@@ -68,9 +68,9 @@ function App() {
             <CreateBook onBookSubmit={onBookSubmit} />
           </Route>
           <Route path="/livros/:id">
-            <FullBook />
+            <FullBook books={books} deleteBookHandler={deleteBookHandler}/>
           </Route>
-          <Route render={() => <div>Pagina nao encontrada</div>} />
+         
         </div>
       </Switch>
     </BrowserRouter>
